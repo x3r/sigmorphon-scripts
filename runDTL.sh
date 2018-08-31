@@ -19,7 +19,7 @@ while read p; do
     do
         let j=2*$i+1
         echo $j
-        for k in `seq 6 8`;
+        for k in `seq 1 10`;
         do
        #Copy
 
