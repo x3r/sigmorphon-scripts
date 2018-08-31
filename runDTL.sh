@@ -18,7 +18,7 @@ while read p; do
     for i in `seq 1 5`;
     do
         let j=2*$i+1
-        echo $j
+        #echo $j
         for k in `seq 1 10`;
         do
        #Copy
