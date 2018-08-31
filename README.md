@@ -8,7 +8,7 @@ python convert2M2M.py inFile outFile flip copy
 
 `inFile` and `outFile` are self-expanatory, with inFile being the shared task file (you can run this script on dev and test, too, to prepare files for testing, although they require a little bit of post-processing afterwards).
 
-"flip" is used for flipping multiwords across a space, and then chooses orderings that lead to better alignments; however, it is better to ignore for the simplicity.
+"flip" is used for flipping multiwords across a space, and then chooses orderings that lead to better alignments; however, it can be ignored here for the simplicity.
 
 "copy" creates copy instances in the training file.  This is important in low-data situations.
 
@@ -29,16 +29,16 @@ sed -i 's/ //g' ES.dev
 
 This creates a source file to give to `DTL`, as well as a gold file to evaluate against. 
 
-The second script, `runM2M.sh`, runs M2M with a number of different parameters, because different languages run better under different alignments.
+The second script, `runM2M.sh`, runs `M2M` with a number of different parameters, because different languages run better under different alignments.
 
-This will produce an aligned m2m file that can be presented to DTL.  
+This will produce an aligned m2m file that can be presented to `DTL`.  
 One note; some of the languages have reserved characters in their input.  Before aligning, replace any ":" and "_" with alternative characters, and then remember to change them back before submission.
 
-`runDTL.sh` is like runM2M, looping over multiple values of cs and jointMgram to find the best parameters.
+`runDTL.sh` is like runM2M, looping over multiple values of `cs` and `jointMgram` to find the best parameters.
 
 For both runDTL and runM2M, it loops over the language list that it finds in a file (such as `langlist.txt`).
 
-evaluate.py takes a gold file, a prediction file, and the name of an error file:
+`evaluate.py` takes a gold file, a prediction file, and the name of an error file:
 
 ```
 python evaluate.py ES.dev ES.preds ES.errors
