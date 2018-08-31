@@ -14,7 +14,7 @@ python convert2M2M.py inFile outFile flip copy
 
 `inFile` and `outFile` are self-expanatory, with inFile being the shared task file (you can run this script on dev and test, too, to prepare files for testing, although they require a little bit of post-processing afterwards).
 
-"flip" is used for flipping multiwords across a space, and then chooses orderings that lead to better alignments; however, it can be ignored here for the simplicity.
+"flip" is used for flipping multiwords across a space, and then choosing orderings that lead to better alignments; however, it can be ignored here for the simplicity.
 
 "copy" creates copy instances in the training file.  This is important in low-data situations.
 
