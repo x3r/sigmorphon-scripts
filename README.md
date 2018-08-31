@@ -1,5 +1,11 @@
 # sigmorphon-scripts
 
+The scripts were originally developed by Dr. Garrett Nicolai.
+
+DirecTL+(DTL) and M2M-aligner(M2M) can be downloaded from https://github.com/GarrettNicolai/DTL and https://github.com/GarrettNicolai/m2m, respectively.
+
+### How to use the scripts
+
 The first, `convert2M2M.py` takes 4 parameters:
 
 ```
